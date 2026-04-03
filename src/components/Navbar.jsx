@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Container from "../layout/Container";
-import Download from "./DownloadButton";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../assets/logo.svg";
@@ -33,6 +32,7 @@ export default function Navbar() {
             >
               <img src={logo} className="w-10 h-10" alt="Logo" />
             </HashLink>
+
             <div className="flex items-center">
               <ul className="flex gap-6 text-gray-500 text-sm mr-5">
                 <li>
@@ -54,16 +54,35 @@ export default function Navbar() {
                     FAQ
                   </HashLink>
                 </li>
-
-                <li>
-                  <Link
-                    to="/changelog"
-                    className="hover:text-gray-700 transition"
-                  >
-                    Changelog
-                  </Link>
-                </li>
               </ul>
+
+              {/* Neuer Download-Button */}
+              {/*  <HashLink
+                smooth
+                to="/#download"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 transition"
+              >
+                Jetzt herunterladen
+              </HashLink> */}
+              <a
+                rel="noopener noreferrer"
+                href="https://github.com/fortyninelabs/notes/releases/download/v1.0.0/Notes-Setup-1.0.0.exe"
+                className="
+    px-6 py-2.5
+    rounded-full
+    text-sm font-semibold
+    text-white
+    bg-linear-to-b from-[#6EB6FF] to-[#1E7BFF]
+    shadow-[0_8px_20px_rgba(30,123,255,0.35)]
+    hover:shadow-[0_12px_28px_rgba(30,123,255,0.45)]
+    hover:brightness-110
+    active:scale-[0.97]
+    transition-all duration-300
+    backdrop-blur-xl
+  "
+              >
+                Jetzt herunterladen
+              </a>
             </div>
           </nav>
         </Container>
