@@ -11,7 +11,7 @@ import ChangelogPage from "./pages/ChangelogPage.jsx";
 import FAQPage from "./pages/FAQPage.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename={import.meta.env.DEV ? "/" : "/notes"}>
+  <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<HomePage />} />
